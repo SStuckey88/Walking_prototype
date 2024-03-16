@@ -5,8 +5,6 @@ using UnityEngine;
 public class move_player : MonoBehaviour
 {
     public float horizontalInput;
-    public float verticalInput;
-    public float turnSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +15,6 @@ public class move_player : MonoBehaviour
     void Update()
     {
         horizontalInput= Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.forward * Time.deltaTime * verticalInput*6);
+        transform.Translate(Vector3.right * Time.deltaTime * horizontalInput*6);
     }
 }
