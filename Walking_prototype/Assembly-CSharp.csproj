@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\circlescript.cs" />
      <Compile Include="Assets\collision_detect.cs" />
+     <Compile Include="Assets\enemies\spawn_enemies.cs" />
      <Compile Include="Assets\move_camera.cs" />
      <Compile Include="Assets\move_player.cs" />
      <Compile Include="Assets\squarescript.cs" />
