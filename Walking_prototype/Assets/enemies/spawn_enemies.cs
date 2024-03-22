@@ -27,7 +27,7 @@ public class spawn_enemies : MonoBehaviour
 
         if (_timeUntilSpawn <= 0) {
 
-            Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
+            Instantiate(_enemyPrefab, transform.position + Vector3.up, Quaternion.identity);
             SetTime();
         }
     }
