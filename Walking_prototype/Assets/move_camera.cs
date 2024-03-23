@@ -27,7 +27,7 @@ public class move_camera : MonoBehaviour
         turn_threshold += Time.deltaTime;
 
         if (turn_threshold >= 120) {
-            transform.Rotate(0, 0, turns[i]);
+            transform.Rotate(0, turns[i], 0);
             i++;
             turn_threshold = 0;
         }
