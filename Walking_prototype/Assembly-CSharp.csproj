@@ -57,9 +57,15 @@
   <ItemGroup>
      <Compile Include="Assets\circlescript.cs" />
      <Compile Include="Assets\collision_detect.cs" />
+     <Compile Include="Assets\enemies\spawn_attack.cs" />
      <Compile Include="Assets\enemies\spawn_enemies.cs" />
+     <Compile Include="Assets\health_tracker.cs" />
      <Compile Include="Assets\move_camera.cs" />
      <Compile Include="Assets\move_player.cs" />
+     <Compile Include="Assets\move_towards_enemy.cs" />
+     <Compile Include="Assets\move_towards_player.cs" />
+     <Compile Include="Assets\random_move.cs" />
+     <Compile Include="Assets\spawn_bullet.cs" />
      <Compile Include="Assets\squarescript.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.40f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
