@@ -1,0 +1,121 @@
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+//Do not change the code in main function and Board Class
+
+//*********************************************************************************//
+//******************************Lab Starts HERE************************************//
+//Task 1: Implement string reverse using recursion. 
+// word is the word to reverse, and the return value is the reversed word.
+// Remember that you can use substr to get part of a string:
+// word.substr(0, 1) would return the first character (you can also use .at but this returns it as a string which may be helpful)
+// word.substr(1) returns the rest of the string, starting at index 1.
+string reverseWord(string word){
+   if (word.size() == 1) {
+      return word;
+      }
+   else {
+      return reverseWord(word.substr(1, word.size()-1)) + word.at(0);
+      }
+
+}
+
+//Task 2: Implement Binary Search using Recursion. 
+//This function returns the location of targetString in a pre-defined dictionary if present, otherwise returns -1.
+// targetString is the word we're searching for
+// dictionary is the vector of words to search in, it must be sorted alphabetically
+// start is the first index where our targetString may be, based on where we've looked so far
+// end is the last index where our targetString may be, based on where we've looked so far
+int binarySearchRecursion(string targetString, vector<string> dictionary, int start, int end){
+   // If the word has not been found:
+   int mid = (end+start) / 2;
+   cout << start << " " << mid << " " << end << endl;
+   if (start > end || ((start == end) &&  dictionary.at(mid) != targetString)) {
+      return -1;
+   } 
+   else if (dictionary.at(mid) == targetString) {
+      return mid;
+      }
+   else if (targetString  > dictionary.at(mid)) {
+      return binarySearchRecursion(targetString, dictionary, mid, end);
+      }
+   else {
+      return binarySearchRecursion(targetString, dictionary, start, mid);
+      }
+
+
+    // If it is not equal, determine what the new start and end should be 
+    // (based on whether our word should be before or after the middle item)
+    // and return whatever binarySearch returns when searching that smaller space
+}
+
+//Extra Credit: Implement the function that prints all permutations of targetString using recursion.
+
+vector<string> permuteRecursion(string targetString){
+   // This will keep track of our permutations, we want to add all permutations of our original string
+   vector<string> permutations;
+   
+   //Base case
+   if (targetString.size() == 0) {
+      permutations.push_back(targetString);
+      }
+   else if (targetString.size() == 2) {
+      permutations.push_back(targetString.at(0) + targetString.at(1));
+      permutations.push_back(targetString.at(1) + targetString.at(0));
+      }
+   else {
+      m = targetString.at(i);
+      vector<string> hi = permuteRecursion(targetString.substr(1, targetString.size()-1));
+      for (int i = 0; i < targetString.size(); i++) {
+      for (int j = 0; j < hi.size(); hi++) {
+         permutations.push_back(hi.at(j).substr(0, i) + m + hi.at(j).substr(i, targetString.size()-i-2));
+         }
+      }
+      }
+
+   
+   
+   return permutations;
+}
+
+int main(){
+   vector<string> dictionary = {"car", "enter", "frog", "hello", "ice", "marker", "mixed", "shift", "television", "world"};
+   int task;
+   string inputWord;
+
+   cout << "Enter the word to use: ";
+   cin >> inputWord;
+   
+   cout << "Enter the task you want to execute:" << endl
+        << "1 for reverse the word" << endl
+        << "2 for check if the word exists in the pre-defined dictionary" << endl
+        << "3 for print all permutations of the word" << endl;
+   cin >> task;
+   int found;
+   vector<string> permutations;
+
+   switch(task){
+      case 1:
+         cout << "The word reversed is: " << reverseWord(inputWord);
+         break;
+      case 2:
+         found = binarySearchRecursion(inputWord, dictionary, 0, dictionary.size()-1);
+         if(found != -1) {
+            cout << "The word is in the dictionary at index " << found << endl;
+         } else {
+            cout << "The word is NOT in the dictionary." <<endl;
+         }
+         break;
+      case 3:
+         permutations = permuteRecursion(inputWord);
+
+         cout << "A list of permutations: " << endl;
+         for (int i = 0; i < permutations.size(); i++) {
+             cout << "  " << permutations.at(i) << endl;
+         }
+         break;
+   }
+}
