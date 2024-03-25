@@ -13,7 +13,7 @@ public class Lights : MonoBehaviour
     }
 
     // Update is called once per frame
-    void updateLighting(int currenthealth) {
+    public void updateLighting(float currenthealth) {
         currhealth = currenthealth;
         lightIntensity = (currhealth / 100) - 0.1f;
         if (lightIntensity < 0) { 

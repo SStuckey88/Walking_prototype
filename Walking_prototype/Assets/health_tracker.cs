@@ -34,7 +34,7 @@ public class health_tracker : MonoBehaviour
     {
         currenthealth -= damage;
         mslider.value -= 10.0f;
-        Lights.updateLighting(currenthealth);
+        //Lights.updateLighting(currenthealth);
     }
 
 }//End of Code
