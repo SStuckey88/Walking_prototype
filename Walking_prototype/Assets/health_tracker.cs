@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,7 +35,24 @@ public class health_tracker : MonoBehaviour
     {
         currenthealth -= damage;
         mslider.value -= 10.0f;
-        //Lights.updateLighting(currenthealth);
+        for (int i = 0; i < 4; i++)
+        {
+            GameObject m = GameObject.Find("myLight" + i);
+            updateLighting(currenthealth, m);
+        }
+    }
+
+    public void updateLighting(float currenthealth, GameObject currLight)
+    {
+        float lightIntensity;
+        float currhealth = currenthealth;
+        lightIntensity = (currhealth / 100) - 0.1f;
+        if (lightIntensity < 0)
+        {
+            lightIntensity = 0;
+        }
+        Light areaLight = currLight.GetComponent<Light>();
+        areaLight.intensity = lightIntensity;
     }
 
 }//End of Code
