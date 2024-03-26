@@ -95,15 +95,16 @@
      <Compile Include="Assets\buttonUi.cs" />
      <Compile Include="Assets\circlescript.cs" />
      <Compile Include="Assets\collision_detect.cs" />
+     <Compile Include="Assets\enemies\move_towards_player.cs" />
      <Compile Include="Assets\enemies\spawn_attack.cs" />
      <Compile Include="Assets\enemies\spawn_enemies.cs" />
      <Compile Include="Assets\go_to_next_scene.cs" />
      <Compile Include="Assets\health_tracker.cs" />
+     <Compile Include="Assets\hurt_player.cs" />
      <Compile Include="Assets\init.cs" />
      <Compile Include="Assets\move_camera.cs" />
      <Compile Include="Assets\move_player.cs" />
      <Compile Include="Assets\move_towards_enemy.cs" />
-     <Compile Include="Assets\move_towards_player.cs" />
      <Compile Include="Assets\newScene.cs" />
      <Compile Include="Assets\random_move.cs" />
      <Compile Include="Assets\spawn_bullet.cs" />

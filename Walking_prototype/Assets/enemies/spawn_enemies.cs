@@ -16,11 +16,11 @@ public class spawn_enemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _minimumSpawnTime -= 450;
+        _minimumSpawnTime -= 550;
         if (_minimumSpawnTime < 0) { 
         _minimumSpawnTime = 0;
         } 
-        _maximumSpawnTime += 800;
+        _maximumSpawnTime += 300;
         SetTime();
     }
     

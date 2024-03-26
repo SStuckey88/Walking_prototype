@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attack: {fileID: 4693127477744804542, guid: 9f7eb16de2846594a8af76496aabf09d, type: 3}
-  _minimumSpawnTime: 50
-  _maximumSpawnTime: 300
+  _minimumSpawnTime: 20
+  _maximumSpawnTime: 100
