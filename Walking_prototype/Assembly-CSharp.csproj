@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Lights.cs" />
+     <Compile Include="Assets\ScoreTracker.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -90,6 +91,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+     <Compile Include="Assets\TimeTracker.cs" />
      <Compile Include="Assets\buttonUi.cs" />
      <Compile Include="Assets\circlescript.cs" />
      <Compile Include="Assets\collision_detect.cs" />
@@ -106,6 +108,7 @@
      <Compile Include="Assets\random_move.cs" />
      <Compile Include="Assets\spawn_bullet.cs" />
      <Compile Include="Assets\squarescript.cs" />
+     <Compile Include="Assets\streetfix.cs" />
      <Compile Include="Assets\viewManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

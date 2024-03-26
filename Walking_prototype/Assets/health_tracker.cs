@@ -31,10 +31,16 @@ public class health_tracker : MonoBehaviour
         
     }
 
+    public void invokeDamage(int dam)
+    {
+        TakeDamage(dam);
+    }
+
     void TakeDamage(int damage)
     {
         currenthealth -= damage;
-        mslider.value -= 10.0f;
+        float inbetween = damage;
+        mslider.value -= damage;
         for (int i = 0; i < 4; i++)
         {
             GameObject m = GameObject.Find("myLight" + i);
