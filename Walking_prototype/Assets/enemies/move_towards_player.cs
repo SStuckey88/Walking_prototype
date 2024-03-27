@@ -40,16 +40,16 @@ public class move_towards_player : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 1.5)
+        if (time > 4)
         {
             pos = player.transform.position - transform.position;
             move_towards(pos);
             time = 0;
         }
-        if (pos.y < 5 && pos.x < 5 && pos.z < 10)
-        {
-            health_tracker.invokeDamage(5);
-        }
+        //if (pos.y < 5 && pos.x < 5 && pos.z < 10)
+        //{
+         //   health_tracker.invokeDamage(5);
+        //}
 
         
     }

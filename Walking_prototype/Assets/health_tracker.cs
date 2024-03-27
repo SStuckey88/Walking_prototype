@@ -4,7 +4,7 @@ using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 using UnityEngine.UI;
 
-static public class health_tracker
+public class health_tracker
 {
     // Start is called before the first frame update
     public float currenthealth;
@@ -12,7 +12,7 @@ static public class health_tracker
     public Slider mslider;
 
 
-    static void Start()
+    void Start()
     {
         currenthealth = maxHealth;
         mslider.maxValue = 100.0f;
@@ -20,12 +20,12 @@ static public class health_tracker
         mslider.value = 100.0f;
     }
 
-    static public void invokeDamage(int dam)
+    public void invokeDamage(int dam)
     {
         TakeDamage(dam);
     }
 
-    public static void TakeDamage(int damage)
+    void TakeDamage(int damage)
     {
         currenthealth -= damage;
         float inbetween = damage;
@@ -37,7 +37,7 @@ static public class health_tracker
         }
     }
 
-    static public void updateLighting(float currenthealth, GameObject currLight)
+    public void updateLighting(float currenthealth, GameObject currLight)
     {
         float lightIntensity;
         float currhealth = currenthealth;
