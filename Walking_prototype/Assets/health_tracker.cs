@@ -4,37 +4,32 @@ using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class health_tracker : MonoBehaviour
+public class health_tracker
 {
     // Start is called before the first frame update
     public float currenthealth;
     public float maxHealth=100;
-
     public Slider mslider;
 
 
     void Start()
     {
-        currenthealth=maxHealth;
+        currenthealth = maxHealth;
         mslider.maxValue = 100.0f;
         mslider.minValue = 0.0f;
         mslider.value = 100.0f;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void invokeDamage(int dam)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(10);
-        }
-        
+        TakeDamage(dam);
     }
 
     void TakeDamage(int damage)
     {
         currenthealth -= damage;
-        mslider.value -= 10.0f;
+        float inbetween = damage;
+        mslider.value -= damage;
         for (int i = 0; i < 4; i++)
         {
             GameObject m = GameObject.Find("myLight" + i);
